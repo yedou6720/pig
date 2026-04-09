@@ -1,98 +1,552 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-		<script>
-		function qianze()
-		{
-		var i;
-		alert("爱猪人士表示强烈谴责")
-		alert("猪猪这么可爱你真的不养吗？")
-		alert("你确定吗？")
-		alert("好吧，我知道你想做什么了")
-		open("https://ys.mihoyo.com/?utm_source=adbdsem&from_channel=adbdsem#/")
-		}
-		function qianze_1()
-		{
-		alert("我们需要你这样的人才！")
-		alert("但是爱谴责人士表示强烈谴责")
-		open("https://www.zhuwang.com.cn/")
-		}
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奶茶人格测试</title>
+    <style>
 		
-		</script>
-	</head>
-	<body>
-		<h1 class= "biaoti" >养猪小助手</h1><br />
-		<h2 style=" text-align: center; color: aliceblue; font-size: 2em; font-weight: 500; margin-top:-2em ;">tips</h2>
-		<h3 style=" color: aliceblue; font-size: 2.5em; font-weight: 500; margin-top:0.5em  ;">哎呀，城市生活好累啊，不如回家去养猪!</h2>
-			<div>
-				<img class="tupian" src="img/a3.jpg" />
-			</div>
-			<div>
-				<h4 class="wenti">你是否<p>有过</p>这样的<p>想法呢？</p></h4>
-			</div>
-			<div>
-				<button onclick="qianze_1()()" class="key">是</button>
-				<button onclick="qianze()" class="key">否</button>
-			</div>
-			<div>
-				<h1 class="tips">冷知识:猪的体脂率其实很低，家猪只有15%，野猪则是8%，狂热健身爱好者才能维持在这个体脂率。</h1>
-			</div>
-			
-			
-	</body>
-	<style>
-		.tips{
-			color: black;
-			font-size: 2em;
-			margin-top: 300px;
-			border: 2px solid #faebd7; /* 设置边框样式 */
-			padding: 10px; /* 设置内边距 */
-			width: fit-content; /* 设置宽度适应内容 */
-			background-color: antiquewhite;
-		}
-		.key{
-			font-size: 5em;
-			width: 5em;
-			margin-left: 50px;
-			font-family: "宋体";
-			background-color: azure;
-			border-radius: 50px;
-			cursor: pointer;
-		}
-		.key:hover{
-			background-color:aqua;
-		}
-		.biaoti {
-			font-family: "宋体";
-			font-size: 4em;
-			text-align: center;
-			color: aliceblue;
-		}
-		.tupian{
-			height: 30em;
-			width: 30em;
-			float: right;
-		}
-		.wenti{
-			font-family: "宋体";
-			font-size: 3em;
-			text-align: center;
-			margin-top: 3em;
-			font-weight: 600;
-			color:black;
-		}
-		body {
-			background-image: url('img/b1.png');
-			background-repeat: no-repeat;
-			margin: 0;
-			height: 100vh;
-			background-size: cover;
-			background-position: center;
-			background-attachment: fixed;
-			}
+		@import url('https://fonts.googleapis.cn/css2?family=ZCOOL+KuaiLe&display=swap');
 		
-		body
-	</style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f5f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        /* 开始界面 */
+        .start-page {
+            display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh; /* 占满整个屏幕高度 */
+                text-align: center;
+                gap: 20px;
+                /* 👇 背景图核心设置 */
+                background: url("img/2.png") calc(50% - 60px) center / 1000px auto no-repeat;
+                position: relative;
+                overflow: hidden;
+                transform: none !important;
+                perspective: none !important;
+				background-color: #fff3d9;
+        }
+
+        .start-title {
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    font-weight: 400; /* 站酷快乐体本身是粗体，900会失效，改成400 */
+    letter-spacing: 3px;
+        }
+
+        .start-subtitle {
+            font-family: "STXingkai", "KaiTi", "PingFang SC", sans-serif;
+              font-weight: 500;
+			  font-size: 25px;
+        }
+
+        .start-emoji {
+            font-size: 90px;
+            margin: 10px 0;
+        }
+
+        .start-desc {
+            font-size: 15px;
+            color: #777;
+            max-width: 320px;
+            line-height: 1.6;
+        }
+
+        .start-btn {
+            background: #a78b77;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 14px 40px;
+            font-size: 17px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        .start-btn:hover {
+            background: #8c7360;
+        }
+
+        /* 头部 */
+        .header {
+            text-align: center;
+            padding: 20px 0 10px;
+            display: none;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            color: #5a4a42;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #88776e;
+        }
+
+        /* 进度条 */
+        .progress-wrap {
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #e8e2dd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #a78b77;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* 题目卡片 */
+        .question-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .question-number {
+            font-size: 14px;
+            color: #a78b77;
+            margin-bottom: 12px;
+        }
+
+        .question-text {
+            font-size: 17px;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option-item {
+            border: 2px solid #e8e2dd;
+            border-radius: 12px;
+            padding: 14px 18px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .option-item:hover {
+            border-color: #a78b77;
+            background: #faf7f4;
+        }
+
+        .option-item.selected {
+            border-color: #a78b77;
+            background: #f5f0eb;
+            color: #5a4a42;
+        }
+
+        /* 按钮 */
+        .btn-wrap {
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .next-btn {
+            background: #a78b77;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 11px 36px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .next-btn:disabled {
+            background: #d4c9c0;
+            cursor: not-allowed;
+        }
+
+        /* 加载 */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 20px;
+            border: 4px solid #e8e2dd;
+            border-top: 4px solid #a78b77;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 结果页 */
+        .result-page {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .result-emoji {
+            font-size: 80px;
+            margin: 10px 0;
+        }
+
+        .result-title {
+            font-size: 30px;
+            color: #5a4a42;
+        }
+
+        .result-desc {
+            font-size: 16px;
+            color: #88776e;
+            margin: 10px 0 25px;
+        }
+
+        .result-detail {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .result-detail h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #5a4a42;
+        }
+
+        .result-detail p {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .restart-btn {
+            background: #a78b77;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 36px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- 开始界面 -->
+        <div class="start-page" id="start-page">
+            <h1 class="start-title">奶茶人格测试</h1>
+            <p class="start-subtitle">测测你是哪杯奶茶</p>
+            <div class="start-emoji">🧋</div>
+            <p class="start-desc">20道题，测出你🧠里的奶茶</p>
+            <button class="start-btn" onclick="startTest()">开始装杯</button>
+        </div>
+
+        <!-- 头部 -->
+        <div class="header" id="header">
+            <h1>🧋 奶茶人格测试</h1>
+            <p>测测你是哪杯奶茶</p>
+        </div>
+
+        <!-- 进度条 -->
+        <div class="progress-wrap" id="progress-wrap">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- 题目 -->
+        <div class="question-card" id="question-card">
+            <div class="question-number" id="question-number"></div>
+            <div class="question-text" id="question-text"></div>
+            <div class="options-list" id="options-list"></div>
+        </div>
+
+        <div class="btn-wrap" id="btn-wrap">
+            <button class="next-btn" id="next-btn" disabled>下一题</button>
+        </div>
+
+        <!-- 加载 -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>正在分析你的奶茶人格...</p>
+        </div>
+
+        <!-- 结果 -->
+        <div class="result-page" id="result-page">
+            <div class="result-emoji" id="result-emoji">🧋</div>
+            <h2 class="result-title" id="result-title">你的奶茶人格</h2>
+            <p class="result-desc" id="result-desc"></p>
+
+            <div class="result-detail">
+                <h3>人格解析</h3>
+                <p id="result-analysis"></p>
+            </div>
+            <div class="result-detail">
+                <h3>适配指南</h3>
+                <p id="result-suggest"></p>
+            </div>
+
+            <button class="restart-btn" onclick="restartTest()">再测一次</button>
+        </div>
+    </div>
+
+    <script>
+        // 题目数据
+        const questions = [
+            {id:1,text:"朋友临时约你出门，你的第一反应是？",options:[
+                {text:"又要社交…算了勉强去吧",score:1},
+                {text:"找个理由婉拒，继续躺平",score:2},
+                {text:"直接装死，假装没看见",score:3}
+            ]},
+            {id:2,text:"你对“未来”的看法更接近？",options:[
+                {text:"走一步看一步，活着就行",score:1},
+                {text:"偶尔焦虑，但很快躺平",score:2},
+                {text:"没什么期待，也没什么所谓",score:3}
+            ]},
+            {id:3,text:"别人夸你好看/厉害，你内心？",options:[
+                {text:"谢谢，但我知道我啥样",score:1},
+                {text:"尴尬一笑，赶紧转移话题",score:2},
+                {text:"别夸了，我会飘然后摆烂",score:3}
+            ]},
+            {id:4,text:"一天中你最幸福的时刻是？",options:[
+                {text:"躺在床上刷手机那一刻",score:1},
+                {text:"不用说话、不用社交的时候",score:2},
+                {text:"啥也不用干，纯发呆的时候",score:3}
+            ]},
+            {id:5,text:"遇到麻烦事，你的第一反应是？",options:[
+                {text:"先逃，能拖一会儿是一会儿",score:1},
+                {text:"冷静处理，反正总会过去",score:2},
+                {text:"毁灭吧，赶紧的，累了",score:3}
+            ]},
+            {id:6,text:"你对“甜”的真实态度是？",options:[
+                {text:"嘴上说怕胖，身体很诚实",score:1},
+                {text:"太甜会腻，微甜刚好凑合",score:2},
+                {text:"无所谓，能喝就行，不挑",score:3}
+            ]},
+            {id:7,text:"陌生人对你热情搭话，你会？",options:[
+                {text:"表面礼貌，内心想逃",score:1},
+                {text:"简单应付，快速结束对话",score:2},
+                {text:"直接冷脸，让对方识趣点",score:3}
+            ]},
+            {id:8,text:"你觉得自己的精神状态？",options:[
+                {text:"时而正常，时而想入土",score:1},
+                {text:"稳定发疯，稳定摆烂",score:2},
+                {text:"表面平静，内心全是戏",score:3}
+            ]},
+            {id:9,text:"让你坚持下去的动力主要是？",options:[
+                {text:"想吃的东西还没吃到",score:1},
+                {text:"暂时还没找到摆烂的理由",score:2},
+                {text:"没钱，不得不活着",score:3}
+            ]},
+            {id:10,text:"朋友向你疯狂吐槽，你会？",options:[
+                {text:"嗯嗯啊啊，左耳进右耳出",score:1},
+                {text:"象征性安慰，其实在走神",score:2},
+                {text:"直接劝其放弃，一起摆烂",score:3}
+            ]},
+            {id:11,text:"你更喜欢的状态是？",options:[
+                {text:"一个人待着，谁也别烦我",score:1},
+                {text:"和很熟的人浅浅待在一起",score:2},
+                {text:"人多热闹，但我只当背景板",score:3}
+            ]},
+            {id:12,text:"做事没动力时，你通常？",options:[
+                {text:"先摆烂，最后极限赶工",score:1},
+                {text:"干脆不做，爱咋咋地",score:2},
+                {text:"逼自己一下，但很快放弃",score:3}
+            ]},
+            {id:13,text:"你对人际关系的看法？",options:[
+                {text:"合得来就处，合不来拉倒",score:1},
+                {text:"懒得维护，顺其自然",score:2},
+                {text:"越少越好，清净最重要",score:3}
+            ]},
+            {id:14,text:"看到别人很努力内卷，你？",options:[
+                {text:"佩服，但我选择躺平",score:1},
+                {text:"有点焦虑，然后继续玩手机",score:2},
+                {text:"关我屁事，别影响我发呆",score:3}
+            ]},
+            {id:15,text:"你生气时的表现？",options:[
+                {text:"表面没事，内心已经拉黑",score:1},
+                {text:"懒得吵，默默远离就好",score:2},
+                {text:"直接冷处理，谁爱理谁理",score:3}
+            ]},
+            {id:16,text:"周末被安排事情，你会？",options:[
+                {text:"表面答应，内心极度抗拒",score:1},
+                {text:"能推就推，不能推就敷衍",score:2},
+                {text:"直接拒绝，我要我的时间",score:3}
+            ]},
+            {id:17,text:"你对“浪漫”的看法？",options:[
+                {text:"看看就行，不向往也不排斥",score:1},
+                {text:"有点土，但偶尔会被戳中",score:2},
+                {text:"没必要，不如给我点实在的",score:3}
+            ]},
+            {id:18,text:"压力大到受不了时，你会？",options:[
+                {text:"大吃一顿，然后继续摆烂",score:1},
+                {text:"躲起来发呆，自我恢复",score:2},
+                {text:"深夜emo，第二天照常活",score:3}
+            ]},
+            {id:19,text:"你对自己的评价？",options:[
+                {text:"普通且平静，偶尔想发疯",score:1},
+                {text:"温柔但冷漠，好相处也难靠近",score:2},
+                {text:"外表正常，灵魂已经半退休",score:3}
+            ]},
+            {id:20,text:"如果可以不用上班/上学，你会？",options:[
+                {text:"天天宅家，吃喝躺睡",score:1},
+                {text:"偶尔出门，大部分时间发呆",score:2},
+                {text:"找个角落，安安静静活着",score:3}
+            ]}
+        ];
+
+        // 结果
+        const results = [
+            {name:"🥭 杨枝甘露",emoji:"🥭",desc:"看起来阳光热闹，其实内心只想快乐摆烂",analysis:"你表面上是朋友眼里的气氛担当，能陪玩能唠嗑，好像永远活力满满。但实际上，你只是把社交当成了一种任务，内心深处只想找个地方躺平，谁也别来烦你。你擅长用热闹掩盖自己的虚无感，用快乐伪装自己的摆烂心态，是典型的「外向型社恐」。",suggest:"不用逼自己一直当小太阳，累了就直接摆烂，拒绝无效社交，把时间留给自己。找个舒服的角落，吃点好吃的，比什么都强。"},
+            {name:"🌸 白桃乌龙",emoji:"🌸",desc:"温柔又冷淡，情绪稳定，半佛系半清醒",analysis:"你是那种看起来温柔好相处，其实内心有自己的边界感的人。你不喜欢争抢，不喜欢内卷，凡事都抱着「顺其自然」的心态，情绪稳定到离谱。你对很多事情都看得很淡，既不热情也不冷漠，像一杯淡淡的白桃乌龙，舒服又有距离感。",suggest:"不用强迫自己融入热闹，保持自己的节奏就好。偶尔可以稍微主动一点，别让别人觉得你太冷漠，毕竟温柔和摆烂可以同时存在。"},
+            {name:"☕️ 冰美式",emoji:"☕️",desc:"灵魂半入土，外表冷静，内心毫无波澜",analysis:"你是典型的「人间清醒摆烂选手」，对很多事情都提不起兴趣，也没有太大的期待。你外表看起来冷静克制，不爱说话，其实内心已经看透一切，只想安安静静地活着。你不喜欢麻烦，不喜欢社交，不喜欢内卷，最大的愿望就是「不被打扰」。",suggest:"不用逼自己变得积极向上，接受自己的摆烂状态。找一个能让你舒服的生活方式，不用在意别人的眼光，活着就行。"},
+            {name:"🍇 多肉葡萄",emoji:"🍇",desc:"看着精致好接近，其实懒得社交只想躺",analysis:"你外表看起来精致可爱，好像很会社交，很会生活。但实际上，你只是懒得拒绝别人，懒得撕破脸，内心深处只想宅家躺平，谁也别来打扰。你对很多事情都抱着「差不多就行」的心态，不追求完美，不追求极致，舒服就好。",suggest:"不用勉强自己维持精致人设，累了就直接摆烂。学会拒绝无效社交，把时间留给自己，比什么都重要。"},
+            {name:"🍵 抹茶奶绿",emoji:"🍵",desc:"安静佛系，与世无争，活着就行型人格",analysis:"你是那种与世无争的佛系选手，对很多事情都没有太大的欲望，也没有太大的追求。你喜欢安静，喜欢独处，不喜欢热闹，不喜欢争抢。你最大的愿望就是安安稳稳地活着，没有压力，没有烦恼，像一杯淡淡的抹茶奶绿，治愈自己，也治愈别人。",suggest:"不用逼自己努力，不用逼自己优秀，接受自己的平凡。找一个慢节奏的生活方式，慢慢享受生活，就很好。"},
+            {name:"🥛 黑糖波波牛乳",emoji:"🥛",desc:"软萌摆烂选手，快乐全靠吃和睡",analysis:"你是软乎乎的小甜豆，性格温柔，心思单纯，最大的快乐就是吃和睡。你不喜欢复杂的人际关系，不喜欢勾心斗角，只想安安稳稳地过自己的小日子。你有点小懒，有点小摆烂，但永远保持着对生活的热爱，用吃和睡治愈自己的一切烦恼。",suggest:"不用逼自己减肥，不用逼自己努力，吃好喝好睡好，就是最大的幸福。偶尔可以稍微动一动，但别太累，开心最重要。"},
+            {name:"🍋 泰式柠檬茶",emoji:"🍋",desc:"不好惹也不想惹，清醒又叛逆",analysis:"你是直爽又叛逆的选手，讨厌虚伪，讨厌套路，讨厌一切不真诚的人和事。你不喜欢迎合别人，不喜欢委屈自己，有话直说，敢爱敢恨。你外表看起来不好惹，其实内心很通透，只是不想浪费时间在不值得的人和事上。",suggest:"不用逼自己变得圆滑，保持自己的棱角就好。远离那些让你不舒服的人和事，好好爱自己，比什么都重要。"},
+            {name:"🥑 牛油果奶昔",emoji:"🥑",desc:"别人看不懂你，你也懒得解释",analysis:"你是小众又独特的选手，有自己的审美，有自己的想法，不随大流，不跟风。你不喜欢热闹，不喜欢社交，喜欢独处，喜欢做自己喜欢的事情。别人看不懂你，你也懒得解释，活在自己的世界里，舒服又自在。",suggest:"不用逼自己融入群体，不用逼自己变得大众化。坚持自己的喜好，做自己就好，总会有人懂你。"},
+            {name:"🥥 生椰拿铁",emoji:"🥥",desc:"外冷内热，人间清醒，半退休状态",analysis:"你是外冷内热的清醒选手，外表看起来冷淡疏离，其实内心很温柔，很有主见。你不喜欢麻烦别人，也不喜欢别人麻烦自己，凡事都靠自己，独立又坚强。你对很多事情都看得很透，不内卷，不内耗，处于一种「半退休」的舒服状态。",suggest:"不用逼自己变得热情，保持自己的节奏就好。偶尔可以稍微打开自己一点，让别人看到你温柔的一面，别总是一个人扛着。"},
+            {name:"🧋 经典珍珠奶茶",emoji:"🧋",desc:"温柔百搭，情绪稳定，摆烂界的常青树",analysis:"你是温柔百搭的老好人，情绪稳定，人缘超好，是朋友眼里最可靠的存在。你不喜欢争抢，不喜欢矛盾，凡事都抱着「大事化小，小事化了」的心态，永远给人一种舒服的感觉。你也会摆烂，也会躺平，但永远不会影响别人，是摆烂界的常青树。",suggest:"不用逼自己一直当老好人，学会拒绝，学会为自己着想。偶尔摆烂没关系，但别委屈自己，好好爱自己。"}
+        ];
+
+        let currentQuestion = 0;
+        let scores = {A:0,B:0,C:0};
+        let selectedOption = null;
+
+        // 开始测试
+        function startTest() {
+            document.getElementById('start-page').style.display = 'none';
+            document.getElementById('header').style.display = 'block';
+            document.getElementById('progress-wrap').style.display = 'block';
+            document.getElementById('question-card').style.display = 'block';
+            document.getElementById('btn-wrap').style.display = 'block';
+            initQuestion();
+        }
+
+        // 初始化题目
+        function initQuestion() {
+            const q = questions[currentQuestion];
+            document.getElementById('question-number').textContent = `第 ${currentQuestion+1} 题 / 共20题`;
+            document.getElementById('question-text').textContent = q.text;
+            const list = document.getElementById('options-list');
+            list.innerHTML = '';
+            selectedOption = null;
+            document.getElementById('next-btn').disabled = true;
+
+            q.options.forEach((opt,i)=>{
+                let item = document.createElement('div');
+                item.className = 'option-item';
+                item.innerHTML = `${String.fromCharCode(65+i)}. ${opt.text}`;
+                item.onclick = ()=>{
+                    document.querySelectorAll('.option-item').forEach(i=>i.classList.remove('selected'));
+                    item.classList.add('selected');
+                    selectedOption = i;
+                    document.getElementById('next-btn').disabled = false;
+                };
+                list.appendChild(item);
+            });
+
+            let progress = ((currentQuestion+1)/questions.length)*100;
+            document.getElementById('progress-fill').style.width = progress+'%';
+        }
+
+        // 下一题
+        document.getElementById('next-btn').onclick = ()=>{
+            if(selectedOption===null)return;
+            if(selectedOption===0) scores.A++;
+            else if(selectedOption===1) scores.B++;
+            else scores.C++;
+
+            currentQuestion++;
+            if(currentQuestion < questions.length){
+                initQuestion();
+            }else{
+                document.getElementById('question-card').style.display = 'none';
+                document.getElementById('btn-wrap').style.display = 'none';
+                document.getElementById('progress-wrap').style.display = 'none';
+                document.getElementById('loading').style.display = 'block';
+
+                setTimeout(showResult,1500);
+            }
+        };
+
+        // 显示结果
+        function showResult() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('result-page').style.display = 'block';
+
+            let total = scores.A+scores.B+scores.C;
+            let a = scores.A/total, b=scores.B/total, c=scores.C/total;
+            let res;
+
+            if(a>0.45) res=results[0];
+            else if(b>0.45) res=results[1];
+            else if(c>0.45) res=results[2];
+            else if(a>0.35&&b>0.35) res=results[3];
+            else if(b>0.35&&c>0.35) res=results[4];
+            else if(a>0.4) res=results[5];
+            else if(c>0.35) res=results[6];
+            else if(c>0.3&&b>0.3) res=results[7];
+            else if(c>0.3) res=results[8];
+            else res=results[9];
+
+            document.getElementById('result-emoji').textContent = res.emoji;
+            document.getElementById('result-title').textContent = res.name;
+            document.getElementById('result-desc').textContent = res.desc;
+            document.getElementById('result-analysis').textContent = res.analysis;
+            document.getElementById('result-suggest').textContent = res.suggest;
+        }
+
+        // 重新测试
+        function restartTest() {
+            currentQuestion = 0;
+            scores = {A:0,B:0,C:0};
+            selectedOption = null;
+            document.getElementById('result-page').style.display = 'none';
+            startTest();
+        }
+    </script>
+</body>
 </html>
